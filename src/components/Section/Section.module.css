@@ -1,0 +1,25 @@
+.section {
+  padding: 20px 0;
+  display: grid;
+  gap: 20px;
+}
+
+.section__title {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow:
+    -1px -1px #fff,
+    -2px -2px #fff,
+    -1px 1px #fff,
+    -2px 2px #fff,
+    1px 1px #fff,
+    2px 2px #fff,
+    1px -1px #fff,
+    2px -2px #fff,
+    -3px -3px 2px #bbb,
+    -3px 3px 2px #bbb,
+    3px 3px 2px #bbb,
+    3px -3px 2px #bbb;
+  color: steelblue;
+}

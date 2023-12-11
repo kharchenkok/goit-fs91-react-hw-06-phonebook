@@ -1,0 +1,15 @@
+.notification{
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C6455A;
+    font-weight: 700;
+    font-size: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
