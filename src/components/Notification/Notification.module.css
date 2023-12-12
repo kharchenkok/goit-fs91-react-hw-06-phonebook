@@ -1,15 +1,16 @@
-.notification{
-    margin: 0 auto;
-    padding: 40px;
-    width: 100%;
-    max-width: 800px;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #C6455A;
-    font-weight: 700;
-    font-size: 26px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.notification {
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  max-width: calc(100% - 80px);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c6455a;
+  font-weight: 700;
+  font-size: 26px;
+
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

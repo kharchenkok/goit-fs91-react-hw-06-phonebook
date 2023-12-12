@@ -1,13 +1,11 @@
-
-
 body {
   margin: 0;
+  background-color: #fedecc;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
@@ -15,67 +13,43 @@ code {
     monospace;
 }
 
-p, h1, h2, ul {
+p,
+h1,
+h2,
+ul {
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.form {
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    color: #2a5d8a;
-    font-weight: 700;
-    font-size: 22px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.form__label {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 10px;
-    align-items: center;
-    color: #2a5d8a;
-    font-weight: 700;
-    font-size: 22px;
+/*.active{*/
+/*  border: 2px solid red;*/
+/*}*/
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 0.6fr;
+  align-items: start;
 }
 
-.form__input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
-
-.form button{
-    background-color: #2a5d8a;
-    color: white;
-    border: 2px solid #2a5d8a;
-    padding: 16px;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-
-.form button:hover{
-    background-color: white;
-    color: #2a5d8a;
-}
-
-
-
-

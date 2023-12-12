@@ -1,0 +1,89 @@
+.form {
+  padding: 40px 20px 20px;
+  position: relative;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  color: #2a5d8a;
+  font-weight: 700;
+  font-size: 22px;
+  background-color: white;
+  border-radius: 16px 16px 0px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.formLabel {
+  position: relative;
+}
+
+.formInput {
+  padding: 10px 20px;
+  border: 1px solid #98d8ff;
+  border-radius: 16px;
+}
+.formInput::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.form button[type='submit'] {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  color: #98d8ff;
+  border: none;
+  padding: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  transition: all 250ms ease-in-out;
+}
+
+.form button[type='submit']:hover {
+  background-color: #98d8ff;
+  color: white;
+}
+
+.formRadioWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.formRadio {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.formRadio:checked + .formRadioColor {
+  border: 2px solid slategrey;
+  transform: scale(1.1);
+}
+.formRadio:hover + .formRadioColor {
+  transform: scale(1.1);
+}
+
+.formRadioColor {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid currentColor;
+  background-color: currentColor;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}

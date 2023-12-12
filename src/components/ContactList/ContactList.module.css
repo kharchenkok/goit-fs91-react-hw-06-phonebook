@@ -1,51 +1,72 @@
-.contact__list {
-  margin: 0 auto;
-  padding: 40px;
+.contactList {
+  padding: 0 40px;
   display: grid;
-
-  max-width: 800px;
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius:16px;
+
 }
-.contact__item {
+.contactItem {
+  position: relative;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 0.7fr;
   align-items: center;
-  border-radius: 4px;
+  /*border-radius: 16px;*/
   background-color: white;
   padding: 10px 20px;
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contactItem:first-child {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.contactItem:first-child .contactDelButton{
+  border-top-right-radius: 16px;
+}
+.contactItem:last-child {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
-.contact__item:not(:last-child) {
+.contactItem:last-child .contactDelButton{
+  border-bottom-right-radius: 16px;
+}
+
+.contactItem:not(:last-child) {
   border-bottom: 1px dashed #ccc;
 }
 
-.contact__item p{
-    display: flex;
-    gap: 6px;
-    align-items: center;
+.nameIcon {
+  width: 30px;
+  height: 30px;
 }
 
-.contact__item svg{
+.contactItem p {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.contactItem svg {
   color: #2a5d8a;
 }
 
-.contact__button {
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: #F85771;
-    border: 2px solid #F85771;
-    padding: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
+.contactDelButton {
+  padding: 8px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  color: #f85771;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 
-.contact__button:hover {
-    background-color: white;
-    color: #F85771;
+.contactDelButton:hover {
+  background-color: #f85771;
+  color: white;
 }
