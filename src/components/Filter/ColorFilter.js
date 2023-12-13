@@ -2,14 +2,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { setColorFilterAction } from '../../store/filter/filterSlice';
 import { DEFAULT_COLOR } from '../../constans/ColorConstans';
+import { contactsSelector } from '../../store/contacts/contactsSelectors';
 
 import style from './Filter.module.css';
 
 const ColorFilter = () => {
   const dispatch = useDispatch();
-  const [activeColor, setActiveColor] = useState('');
+  const { contacts } = useSelector(contactsSelector);
 
-  const { contacts } = useSelector(state => state.contacts);
+  const [activeColor, setActiveColor] = useState('');
 
   const uniqueColors = [...new Set(contacts.map(contact => contact.color))];
 
@@ -35,7 +36,7 @@ const ColorFilter = () => {
         type={'button'}
         value={''}
         className={makeActiveButtonClass('')}
-        onClick={event => handleColorFilter(event)}
+        onClick={handleColorFilter}
       >
         All
         {contacts.length > 0 && <span>({contacts.length})</span>}
@@ -50,7 +51,7 @@ const ColorFilter = () => {
               value={`${color}`}
               style={{ backgroundColor: ` ${color}` }}
               className={makeActiveButtonClass(color)}
-              onClick={event => handleColorFilter(event)}
+              onClick={handleColorFilter}
             ></button>
           )
       )}
@@ -60,7 +61,7 @@ const ColorFilter = () => {
           style={{ backgroundColor: DEFAULT_COLOR }}
           value={DEFAULT_COLOR}
           className={makeActiveButtonClass(DEFAULT_COLOR)}
-          onClick={event => handleColorFilter(event)}
+          onClick={handleColorFilter}
         >
           Other
         </button>

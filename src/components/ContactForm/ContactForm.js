@@ -10,11 +10,12 @@ import {
   colorPickerOptions,
   DEFAULT_COLOR,
 } from '../../constans/ColorConstans';
+import { contactsSelector } from '../../store/contacts/contactsSelectors';
 import style from './ContactForm.module.css';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
-  const { contacts } = useSelector(state => state.contacts);
+  const { contacts } = useSelector(contactsSelector);
 
   const handleSubmit = event => {
     event.preventDefault();

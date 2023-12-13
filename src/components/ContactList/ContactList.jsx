@@ -5,12 +5,14 @@ import { BiSolidUserRectangle, BiPhone } from 'react-icons/bi';
 import ColorFilter from '../Filter/ColorFilter';
 import Notification from '../Notification';
 import { showInfo } from '../../utils/ToastNotification';
+import { contactsSelector } from '../../store/contacts/contactsSelectors';
+import { filterSelector } from '../../store/filter/filterSelector';
 import style from './ContactList.module.css';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const { contacts } = useSelector(state => state.contacts);
-  const { nameFilter, colorFilter } = useSelector(state => state.filter);
+  const { contacts } = useSelector(contactsSelector);
+  const { nameFilter, colorFilter } = useSelector(filterSelector);
 
   const filteredContacts = contacts.filter(
     contact =>
